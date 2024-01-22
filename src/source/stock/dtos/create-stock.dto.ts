@@ -34,12 +34,18 @@ export class CreateStockDto {
   @IsNumber()
   parValue: number;
 
-  @IsNumber()
-  capital: number;
+  @IsString()
+  capital: string;
 
   @IsString()
   currencyType: string;
 
   @IsString()
   ceo: string;
+
+  @IsString()
+  tel: string;
+
+  @IsString()
+  address: string;
 }

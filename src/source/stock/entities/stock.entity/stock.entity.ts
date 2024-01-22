@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
-export class StockEntity {
+@Entity({ name: 'stock' })
+export class Stock {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -39,7 +39,7 @@ export class StockEntity {
   parValue: number;
 
   @Column()
-  capital: number;
+  capital: string;
 
   @Column()
   currencyType: string;

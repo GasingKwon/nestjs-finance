@@ -4,6 +4,9 @@ import { InventoryModule } from './source/inventory/inventory.module';
 import { UserModule } from './source/user/user.module';
 import { TradeModule } from './source/trade/trade.module';
 import { SearchModule } from './source/search/search.module';
+import { ConfigModule } from '@nestjs/config';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { typeORMConfig } from './config/typeorm.config';
 
 @Module({
   imports: [
@@ -12,6 +15,8 @@ import { SearchModule } from './source/search/search.module';
     UserModule,
     TradeModule,
     SearchModule,
+    ConfigModule.forRoot(),
+    TypeOrmModule.forRoot(typeORMConfig),
   ],
   controllers: [],
   providers: [],

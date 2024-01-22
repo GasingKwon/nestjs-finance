@@ -1,6 +1,6 @@
 import { PartialType } from '@nestjs/mapped-types';
 import { CreateStockDto } from './create-stock.dto';
-import { IsNumber, IsOptional } from 'class-validator';
+import { IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class UpdateStockDto extends PartialType(CreateStockDto) {
   @IsOptional()
@@ -16,6 +16,6 @@ export class UpdateStockDto extends PartialType(CreateStockDto) {
   parValue: number;
 
   @IsOptional()
-  @IsNumber()
-  capital: number;
+  @IsString()
+  capital: string;
 }
